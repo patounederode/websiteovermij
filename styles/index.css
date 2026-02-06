@@ -1,0 +1,30 @@
+
+:root {
+	/* kleuren */
+	color-scheme:light dark;
+	--text-color:light-dark(black, white);
+	--color-text:light-dark(white, black);
+	--text-button-color:light-dark(white, #2a2b2b);
+	--hover-color: hotpink;
+	--bg-color:light-dark(#f7e9f1,rgb(98, 99, 101));
+}
+
+
+
+body {
+    background-color: var(--bg-color);
+
+}
+
+
+
+ul:nth-of-type(1) img {
+    width: 80%;
+    display: grid;
+    justify-self: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
