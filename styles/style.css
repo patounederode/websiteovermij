@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* kleuren */
+  color-scheme: light dark;
+  --text-color: light-dark(white, black);
+  --color-text: light-dark(black, white);
+  --bg-color: #bdd0d89a;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+
+
+img {
+  max-width: 100%;
+}
+
+
+h1 {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  font-size: 2.4em;
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+
+  &:hover {
+    background-color: #ffb6c18c;
+  }
+}
+
+.illustratie svg {
+  display: block;
+  /* voorkomt dat er extra ruimte onder inline svg komt */
+  height: auto;
+  /* houdt verhouding */
+
+
+  max-width: 60%;
+  display: grid;
+  justify-self: center;
+
+}
+
+
+.leerdoelen {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.leerdoelen h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  color: white;
+
+  &:hover {
+    color: ho;
+  }
+}
+
+
+.leerdoelen li {
+  display: inline-block;
+  /* naast elkaar */
+  margin: 3em;
+  text-align: center;
+  align-self: center;
+  /* inhoud centreren */
+  color: white;
+  background-color: #bdd0d89a;
+  padding: 1.3em;
+  border-radius: 2em;
+
+  &:hover {
+    background-color: #ffb6c18c;
+  }
+}
+
+/* Afbeelding boven de h3 */
+.leerdoelen li img {
+  margin-bottom: 1em;
+  /* ruimte onder img */
+  max-width: 40%;
+  height: auto;
+
+}
+
+
+
+/* h3 onder de afbeelding */
+.leerdoelen li h3 {
+  margin: 0;
+  font-size: 1.3em;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+/* ul van eigen API */
+section ul {
+  list-style-type: none;
+}
+
+
+/* eigen naam api */
+section ul h2 {
+  display: flex;
+  justify-self: center;
+  font-size: 2.6em;
+  color: var(--text-color);
+}
+
+/* eigen img api */
+section ul img {
+  max-width: 40%;
+  display: flex;
+  justify-self: center;
+}
+
+/* formulier */
+.form {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 1.4em;
+  margin: 0 1em;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+    &:hover {
+    color: hotpink;
+  }
+}
+
+.form select {
+background-color: hotpink;
+color: white;
+font-size: 0.8em;
+
+}
+
+.form button {
+  background-color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 0.4;
+  &:hover {
+    background-color: hotpink;
+    color: white;
+  }
+}
+
+
+/* animatie plant */
+#plant {
+  transform-box: fill-box;
+  transform-origin: top;
+  animation: zwaai 1s infinite alternate;
+}
+
+@keyframes zwaai {
+  from {
+    transform: rotate(-5deg);
+  }
+
+  to {
+    transform: rotate(5deg);
+  }
+}
+
+
+/* Zon en Maan verbergen afhankelijk van mode */
+body.light-mode #maan,
+body.dark-mode #zon {
+  display: none;
+}
+
+#koffieom {
+  display: none;
+}
+
+/* lightmode */
+
+
+body.light-mode {
+
+  #ogengeslotenkatwit {
+    display: none;
+  }
+
+  #licht {
+    display: none;
+  }
+
+  #ogengeslotenkatrood {
+    display: none;
+  }
+
+background: radial-gradient(circle, #F7E4BA 0%, #EDE6DF 50%, #DDEFF7 100%);
+
+
+}
+/* darkmode */
+body.dark-mode {
+
+
+
+  h1 {
+    background-color: #1e1e32b4;
+
+    &:hover {
+      background-color: #1e1e324a;
+    }
+  }
+
+  .leerdoelen li {
+    background-color: #1e1e32b4;
+
+    &:hover {
+      background-color: #1e1e324a;
+    }
+  }
+
+
+  #maan {
+    fill: #d0cce3;
+  }
+
+
+
+  #reflectie {
+    fill: #292944;
+
+  }
+
+  #raam1 {
+    fill: #1e1e32;
+  }
+
+  #raam2 {
+    fill: #1e1e32;
+  }
+
+  #reflectie {
+    animation: knipper 1.5s infinite alternate;
+
+    fill: #2c2c45;
+  }
+
+  #ogenopenkatwit {
+    display: none;
+  }
+
+  #ogenopen {
+    display: none;
+  }
+
+  #warmte {
+    display: none;
+  }
+
+  #scherm {
+    animation: knipper 1.5s infinite alternate;
+
+  }
+
+  background: radial-gradient(circle, rgb(108, 108, 128) 0%, #1e1e32 100%);
+
+  footer {
+    background-color: #1e1e32;
+  }
+}
+
+
+
+
+/* Keyframes voor knipperen */
+@keyframes knipper {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+#licht {
+  animation: knipper 1.5s infinite alternate;
+
+}
+
+#warmte {
+  animation: knipper 1s infinite alternate;
+}
+
+
+footer {
+  padding: 3em;
+  background-color: #bdd0d89a;
+
+  &:hover {
+    background-color: #ffb6c18c;
+  }
+}
