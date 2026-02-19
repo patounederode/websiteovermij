@@ -1,6 +1,14 @@
 
 # SPRINT0
 
+leerdoelen:
+nettere layouts en flex/grid structuren
+
+responsive/toegankelijkheid verbteren
+
+complexere animaties
+
+
 # WEEK 1
 
 ## di 3 feb
@@ -107,3 +115,5 @@ Conclusie: Deze week heb ik veel geleerd over animaties, code structuur en het g
 
 https://cssgradient.io/
 - chatgpt
+
+
