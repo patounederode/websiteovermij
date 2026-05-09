@@ -5,13 +5,17 @@
 :root {
   /* kleuren */
   color-scheme: light dark;
-  --text-color: light-dark(white, black);
+  --text-color: light-dark(rgb(165, 165, 165), black);
   --color-text: light-dark(black, white);
   --bg-color: #bdd0d89a;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.04em;
 }
 
+body {
+text-align: center;
+margin: 0;
+}
 
 
 img {
@@ -20,13 +24,15 @@ img {
 
 
 h1 {
-  background-color: var(--bg-color);
+
+      text-shadow: 0px 6px 20px rgba(30, 30, 50, 0.35);
+
   margin: 0;
   padding: 1em;
   display: flex;
   justify-content: center;
   font-size: 2.4em;
-  color: var(--text-color);
+  color: inherit;
   font-family: Arial, Helvetica, sans-serif;
 
   &:hover {
@@ -56,18 +62,21 @@ h1 {
 
 }
 
-.leerdoelen h2 {
-  font-family: Arial, Helvetica, sans-serif;
+
+.leerdoelen h3 {
+        text-shadow: 0px 6px 20px rgba(30, 30, 50, 0.35);
   font-size: 2em;
   color: white;
 
   &:hover {
     color: ho;
   }
+  text-shadow: 0px 6px 10px rgba(30, 30, 50, 0.075);
 }
 
 
 .leerdoelen li {
+  scale: 0.8;
   display: inline-block;
   /* naast elkaar */
   margin: 3em;
@@ -75,7 +84,7 @@ h1 {
   align-self: center;
   /* inhoud centreren */
   color: white;
-  background-color: #bdd0d89a;
+  background-color: #c7eafba3;
   padding: 1.3em;
   border-radius: 2em;
 
@@ -104,24 +113,34 @@ h1 {
 }
 
 
-
 /* ul van eigen API */
 section ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  justify-items: center;
   list-style-type: none;
 }
 
 
 /* eigen naam api */
-section ul h2 {
+section ul h2{
+  text-shadow: 0px 6px 20px rgba(30, 30, 50, 0.35);
   display: flex;
   justify-self: center;
-  font-size: 2.6em;
-  color: var(--text-color);
+  font-size: 1.5em;
+  margin: 1em;
+
+}
+
+section ul p {
+    text-shadow: 0px 6px 20px rgba(30, 30, 50, 0.35);
 }
 
 /* eigen img api */
 section ul img {
-  max-width: 40%;
+  box-shadow: #1e1e3253 0px 4px 8px, #1e1e325f 0px 6px 20px;
+  border-radius: 1em;
+  max-width: 10em;
   display: flex;
   justify-self: center;
 }
@@ -129,6 +148,8 @@ section ul img {
 /* formulier */
 .form {
   color: white;
+        text-shadow: 0px 6px 20px rgba(30, 30, 50, 0.35);
+
   display: flex;
   justify-content: center;
   font-size: 1.4em;
@@ -140,18 +161,22 @@ section ul img {
   }
 }
 
+
+
 .form select {
 background-color: hotpink;
 color: white;
 font-size: 0.8em;
+border-radius: 0.4em;
 
 }
 
 .form button {
-  background-color: white;
+  background-color: hotpink;
   font-size: 0.8em;
   border: none;
-  border-radius: 0.4;
+  border-radius: 0.4em;
+
   &:hover {
     background-color: hotpink;
     color: white;
@@ -192,9 +217,17 @@ body.dark-mode #zon {
 }
 
 /* lightmode */
+.leerdoelen li {
+  box-shadow: #1e1e3211 0px 4px 8px, #1e1e320b 0px 6px 20px;}
+
 
 
 body.light-mode {
+  background: radial-gradient(circle, #ffe2a4 0%, #ffebd7 50%, #ade6ff 100%);
+
+ 
+  section ul img {
+  box-shadow: #1e1e322a 0px 4px 8px, #1e1e3224 0px 6px 20px;}
 
   #ogengeslotenkatwit {
     display: none;
@@ -208,17 +241,24 @@ body.light-mode {
     display: none;
   }
 
-background: radial-gradient(circle, #F7E4BA 0%, #EDE6DF 50%, #DDEFF7 100%);
-
+ h1,h2, p, .leerdoelen li, .form  {
+    color: #ffffff;
+  }
 
 }
 /* darkmode */
 body.dark-mode {
 
 
+.leerdoelen li {
+  box-shadow: #1e1e3253 0px 4px 8px, #1e1e325f 0px 6px 20px;
+
+}
+
+  background: radial-gradient(circle, rgb(108, 108, 128) 0%, #1e1e32 100%);
 
   h1 {
-    background-color: #1e1e32b4;
+    /* background-color: #1e1e32b4; */
 
     &:hover {
       background-color: #1e1e324a;
@@ -276,11 +316,6 @@ body.dark-mode {
 
   }
 
-  background: radial-gradient(circle, rgb(108, 108, 128) 0%, #1e1e32 100%);
-
-  footer {
-    background-color: #1e1e32;
-  }
 }
 
 
@@ -297,7 +332,7 @@ body.dark-mode {
 
 footer {
   padding: 3em;
-  background-color: #bdd0d89a;
+
 
   &:hover {
     background-color: #ffb6c18c;
